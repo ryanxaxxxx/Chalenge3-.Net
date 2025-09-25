@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MotoApi</name>
+    </assembly>
+    <members>
+        <member name="T:MotoApi.Controllers.ManutencaoController">
+            <summary>
+            Controlador responsável pelo gerenciamento de manutenções.
+            </summary>
+        </member>
+        <member name="M:MotoApi.Controllers.ManutencaoController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Retorna todas as manutenções com paginação.
+            </summary>
+            <param name="pageNumber">Número da página (padrão 1).</param>
+            <param name="pageSize">Quantidade de itens por página (padrão 10).</param>
+            <returns>Lista paginada de manutenções com links HATEOAS.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.ManutencaoController.GetById(System.Int32)">
+            <summary>
+            Retorna uma manutenção pelo seu ID.
+            </summary>
+            <param name="id">ID da manutenção.</param>
+            <returns>Objeto da manutenção correspondente ao ID.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.ManutencaoController.CreateManutencao(MotoApi.Models.Manutencao)">
+            <summary>
+            Cria uma nova manutenção.
+            </summary>
+            <param name="manutencaoDto">Objeto com os dados da manutenção a ser criada.</param>
+            <returns>Manutenção criada com ID gerado.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.ManutencaoController.UpdateManutencao(System.Int32,MotoApi.Models.Manutencao)">
+            <summary>
+            Atualiza uma manutenção existente pelo ID.
+            </summary>
+            <param name="id">ID da manutenção a ser atualizada.</param>
+            <param name="manutencao">Objeto da manutenção com alterações.</param>
+            <returns>Sem conteúdo se atualizado com sucesso.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.ManutencaoController.DeleteManutencao(System.Int32)">
+            <summary>
+            Remove uma manutenção pelo ID.
+            </summary>
+            <param name="id">ID da manutenção a ser removida.</param>
+            <returns>Sem conteúdo se removido com sucesso.</returns>
+        </member>
+        <member name="T:MotoApi.Controllers.MotoController">
+            <summary>
+            Controlador responsável pelo gerenciamento de motos.
+            </summary>
+        </member>
+        <member name="M:MotoApi.Controllers.MotoController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Retorna todas as motos cadastradas com paginação e links HATEOAS.
+            </summary>
+            <param name="pageNumber">Número da página (padrão 1).</param>
+            <param name="pageSize">Quantidade de itens por página (padrão 10).</param>
+            <returns>Lista paginada de motos com links HATEOAS.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.MotoController.GetById(System.Int32)">
+            <summary>
+            Retorna uma moto pelo seu ID.
+            </summary>
+            <param name="id">ID da moto.</param>
+            <returns>Objeto da moto correspondente ao ID fornecido.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.MotoController.GetByPlaca(System.String)">
+            <summary>
+            Retorna uma moto pelo número da placa.
+            </summary>
+            <param name="placa">Número da placa da moto.</param>
+            <returns>Objeto da moto correspondente à placa fornecida.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.MotoController.CreateMoto(MotoApi.Models.Moto)">
+            <summary>
+            Cria uma nova moto.
+            </summary>
+            <param name="moto">Objeto da moto a ser criada.</param>
+            <returns>A moto criada com o ID gerado.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.MotoController.UpdateMoto(System.Int32,MotoApi.Models.Moto)">
+            <summary>
+            Atualiza uma moto existente pelo ID.
+            </summary>
+            <param name="id">ID da moto a ser atualizada.</param>
+            <param name="moto">Objeto da moto com as alterações.</param>
+            <returns>Sem conteúdo se atualizado com sucesso.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.MotoController.DeleteMoto(System.Int32)">
+            <summary>
+            Remove uma moto pelo ID.
+            </summary>
+            <param name="id">ID da moto a ser removida.</param>
+            <returns>Sem conteúdo se removido com sucesso.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.MotoController.CreateLinks(System.String,System.Int32)">
+            <summary>
+            Helper para gerar links HATEOAS para a entidade.
+            </summary>
+        </member>
+        <member name="T:MotoApi.Controllers.UsuarioController">
+            <summary>
+            Controlador responsável pelo gerenciamento de usuários.
+            </summary>
+        </member>
+        <member name="M:MotoApi.Controllers.UsuarioController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Retorna todos os usuários com paginação e links HATEOAS.
+            </summary>
+            <param name="pageNumber">Número da página (padrão 1).</param>
+            <param name="pageSize">Quantidade de itens por página (padrão 10).</param>
+            <returns>Lista paginada de usuários com links HATEOAS.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.UsuarioController.GetById(System.Int32)">
+            <summary>
+            Retorna um usuário pelo seu ID.
+            </summary>
+            <param name="id">ID do usuário.</param>
+            <returns>Objeto do usuário correspondente ao ID fornecido.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.UsuarioController.CreateUsuario(MotoApi.Models.Usuario)">
+            <summary>
+            Cria um novo usuário.
+            </summary>
+            <param name="usuario">Objeto do usuário a ser criado.</param>
+            <returns>O usuário criado com o ID gerado.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.UsuarioController.UpdateUsuario(System.Int32,MotoApi.Models.Usuario)">
+            <summary>
+            Atualiza um usuário existente pelo ID.
+            </summary>
+            <param name="id">ID do usuário a ser atualizado.</param>
+            <param name="usuario">Objeto do usuário com as alterações.</param>
+            <returns>Sem conteúdo se atualizado com sucesso.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.UsuarioController.DeleteUsuario(System.Int32)">
+            <summary>
+            Remove um usuário pelo ID.
+            </summary>
+            <param name="id">ID do usuário a ser removido.</param>
+            <returns>Sem conteúdo se removido com sucesso.</returns>
+        </member>
+        <member name="M:MotoApi.Controllers.UsuarioController.CreateLinks(System.String,System.Int32)">
+            <summary>
+            Helper para gerar links HATEOAS para a entidade.
+            </summary>
+        </member>
+        <member name="T:MotoApi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:MotoApi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MotoApi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MotoApi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:MotoApi.Migrations.AddUsuario">
+            <inheritdoc />
+        </member>
+        <member name="M:MotoApi.Migrations.AddUsuario.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MotoApi.Migrations.AddUsuario.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MotoApi.Migrations.AddUsuario.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:MotoApi.Migrations.AddManutencao">
+            <inheritdoc />
+        </member>
+        <member name="M:MotoApi.Migrations.AddManutencao.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MotoApi.Migrations.AddManutencao.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:MotoApi.Migrations.AddManutencao.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:MotoApi.Models.Manutencao">
+            <summary>
+            Representa um serviço de manutenção realizado em uma moto.
+            </summary>
+        </member>
+    </members>
+</doc>
