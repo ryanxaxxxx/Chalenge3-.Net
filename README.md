@@ -48,7 +48,7 @@ A API foi desenhada seguindo os princípios **REST**, permitindo integração si
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-repositorio/motoapi.git
+   git clone https://github.com/ryanxaxxxx/Chalenge3-.Net
    ```
 2. Configure a **connection string** no arquivo `appsettings.json`:
 
