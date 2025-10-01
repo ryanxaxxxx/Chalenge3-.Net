@@ -101,7 +101,5 @@ Lá você poderá explorar todos os endpoints e realizar testes diretamente no S
 ---
 
 
-   ```
-5. Abra um Pull Request.
 
 
